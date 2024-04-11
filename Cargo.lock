@@ -497,7 +497,7 @@ dependencies = [
  "atty",
  "bitflags",
  "clap_lex",
- "indexmap",
+ "indexmap 1.9.3",
  "strsim 0.10.0",
  "termcolor",
  "textwrap 0.15.0",
@@ -1117,6 +1117,12 @@ dependencies = [
 ]
 
 [[package]]
+name = "equivalent"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5443807d6dff69373d433ab9ef5378ad8df50ca6298caf15de6e52e24aaf54d5"
+
+[[package]]
 name = "errno"
 version = "0.2.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1405,7 +1411,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0e4075386626662786ddb0ec9081e7c7eeb1ba31951f447ca780ef9f5d568189"
 dependencies = [
  "fallible-iterator",
- "indexmap",
+ "indexmap 1.9.3",
  "stable_deref_trait",
 ]
 
@@ -1670,7 +1676,7 @@ dependencies = [
  "graph-chain-ethereum",
  "graphql-parser",
  "graphql-tools",
- "indexmap",
+ "indexmap 2.2.6",
  "lazy_static",
  "once_cell",
  "parking_lot 0.12.1",
@@ -1944,7 +1950,7 @@ dependencies = [
  "futures-sink",
  "futures-util",
  "http",
- "indexmap",
+ "indexmap 1.9.3",
  "slab",
  "tokio",
  "tokio-util 0.7.1",
@@ -1956,6 +1962,12 @@ name = "hashbrown"
 version = "0.12.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "db0d4cf898abf0081f964436dc980e96670a0f36863e4b83aaacdb65c9d7ccc3"
+
+[[package]]
+name = "hashbrown"
+version = "0.14.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
 
 [[package]]
 name = "headers"
@@ -2228,13 +2240,23 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "1.9.1"
+version = "1.9.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "10a35a97730320ffe8e2d410b5d3b69279b98d2c14bdb8b70ea89ecf7888d41e"
+checksum = "bd070e393353796e801d209ad339e89596eb4c8d430d18ede6a1cced8fafbd99"
 dependencies = [
  "autocfg",
- "hashbrown",
+ "hashbrown 0.12.1",
  "serde",
+]
+
+[[package]]
+name = "indexmap"
+version = "2.2.6"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "168fb715dda47215e360912c096649d23d58bf392ac62f73919e831745e40f26"
+dependencies = [
+ "equivalent",
+ "hashbrown 0.14.3",
 ]
 
 [[package]]
@@ -2707,7 +2729,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1a5b3dd1c072ee7963717671d1ca129f1048fda25edea6b752bfc71ac8854170"
 dependencies = [
  "crc32fast",
- "indexmap",
+ "indexmap 1.9.3",
 ]
 
 [[package]]
@@ -2890,7 +2912,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e6d5014253a1331579ce62aa67443b4a658c5e7dd03d4bc6d302b94474888143"
 dependencies = [
  "fixedbitset",
- "indexmap",
+ "indexmap 1.9.3",
 ]
 
 [[package]]
@@ -3067,7 +3089,7 @@ version = "0.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "5a03dfae8e64d4aa651415e2a4321f9f09f2e388a2f8bec36bed03bc22c0b687"
 dependencies = [
- "indexmap",
+ "indexmap 1.9.3",
  "take_mut",
 ]
 
@@ -3222,7 +3244,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "9b1447dd751c434cc1b415579837ebd0411ed7d67d465f38010da5d7cd33af4d"
 dependencies = [
  "anyhow",
- "indexmap",
+ "indexmap 1.9.3",
  "log",
  "protobuf 3.1.0",
  "protobuf-support",
@@ -3759,7 +3781,7 @@ version = "0.8.26"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "578a7433b776b56a35785ed5ce9a7e777ac0598aac5a6dd1b4b18a307c7fc71b"
 dependencies = [
- "indexmap",
+ "indexmap 1.9.3",
  "ryu",
  "serde",
  "yaml-rust",
@@ -4503,7 +4525,7 @@ checksum = "9a89fd63ad6adf737582df5db40d286574513c69a11dac5214dc3b5603d6713e"
 dependencies = [
  "futures-core",
  "futures-util",
- "indexmap",
+ "indexmap 1.9.3",
  "pin-project",
  "pin-project-lite",
  "rand",
@@ -4913,7 +4935,7 @@ dependencies = [
  "bincode",
  "cfg-if 1.0.0",
  "cpp_demangle",
- "indexmap",
+ "indexmap 1.9.3",
  "lazy_static",
  "libc",
  "log",
@@ -4998,7 +5020,7 @@ dependencies = [
  "cranelift-entity",
  "cranelift-wasm",
  "gimli 0.24.0",
- "indexmap",
+ "indexmap 1.9.3",
  "log",
  "more-asserts",
  "serde",
@@ -5093,7 +5115,7 @@ dependencies = [
  "backtrace",
  "cc",
  "cfg-if 1.0.0",
- "indexmap",
+ "indexmap 1.9.3",
  "lazy_static",
  "libc",
  "log",
