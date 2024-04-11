@@ -1,0 +1,26 @@
+#[general]
+#query = "query_node_.*"
+
+[store]
+[store.primary]
+connection = "postgresql://dexswap:${PGPASSWORD}@localhost:5432/dexswap"
+pool_size = 10
+
+[deployment]
+# Studio subgraphs
+[[deployment.rule]]
+match = { network = "mochain" }
+indexers = [ "default" ]
+
+[[deployment.rule]]
+indexers = [ "default" ]
+
+[chains]
+ingestor = "default"
+
+[chains.mochain]
+shard = "primary"
+provider = [
+  { label = "mochain", url="https://mainnet-rpc.mochain.app", features = [ "archive", "traces" ] }
+]
+
